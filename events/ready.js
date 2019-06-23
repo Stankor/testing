@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 
 
 module.exports = client => {
-     console.log(`${bot.user.username} está online`)
+     console.log(`${client.user.username} está online`)
     // bot.user.setActivity("Stankor Bot 2.0", {type: "STREAMING", url:"a"});
 
     let statuses = [
@@ -13,7 +13,7 @@ module.exports = client => {
 
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
-        bot.user.setActivity(status, {type: "WATCHING"});
+        client.user.setActivity(status, {type: "WATCHING"});
 
     }, 5000)
 
