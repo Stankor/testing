@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {
 
         msg.delete();
 
-}.catch()
+}
 
 module.exports.config = {
     name: "meme",
