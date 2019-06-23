@@ -2,11 +2,11 @@
 const Discord = require('discord.js');
 const superagent = require("superagent");
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = (client, message, args) => {
 
     let msg = await message.channel.send('Carregando...')
 
-    let {body} = await superagent
+    let {body} = superagent
     .get(`https://apis.duncte123.me/meme`)
     // console.log(body.file)
     if(!{body}) return message.channel.send('Eu buguei! Tente novamente.')
