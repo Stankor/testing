@@ -1,9 +1,9 @@
 const reqEvent = (event) => require(`../events/${event}`)
 
 module.exports = client => {
-    bot.on("ready", function() {reqEvent("ready") (client) });
-    bot.on("reconnecting", () => reqEvent("reconnecting") (client))
-    bot.on("disconnect", () => reqEvent("disconnect") (client))
-    bot.on("warn", reqEvent("warn"))
-    bot.on("error", reqEvent("error"))
+    client.on("ready", function() {reqEvent("ready") (client) });
+    client.on("reconnecting", () => reqEvent("reconnecting") (client))
+    client.on("disconnect", () => reqEvent("disconnect") (client))
+    client.on("warn", reqEvent("warn"))
+    client.on("error", reqEvent("error"))
 }
