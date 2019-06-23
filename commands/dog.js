@@ -1,6 +1,7 @@
 // Comando de cachorro.
 const Discord = require('discord.js');
-exports.run = (client, message, args) => {
+
+module.exports.run = async(client, message, args) => {
 
     let msg = await message.channel.send('Carregando...')
 
