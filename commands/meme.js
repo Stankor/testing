@@ -7,7 +7,7 @@ module.exports.run = async (client, message, args) => {
     let msg = await message.channel.send("Carregando...")
 
     let {data} = await superagent
-    .get(`https://dog.ceo/api/breeds/image/random`)
+    .get(`https://apis.duncte123.me/meme`)
     console.log(data.url)
 }
 
