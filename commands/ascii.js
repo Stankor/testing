@@ -13,6 +13,7 @@ exports.run = (client, message,args, ops) => {
         rendered = rendered.trimRight(); // Remove o espaço que seria deixado vazio.
 
         // Agora iremos checar se a linha excede o limite de caracteres.
+        if(rendered.length < 0) return message.channel.send('Insira algum texto para converter.');
         if(rendered.length > 2000) return message.channel.send('Desculpe-me, essa mensagem é demasiadamente grande.');
 
         // Se tudo estiver ok, enviamos a mensagem.
