@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
     let msg = await message.channel.send('Carregando...')
 
     let {body} = await superagent
-    .get('https://apis.duncte123.me/meme')
+    .get(`https://apis.duncte123.me/meme`)
     // console.log(body.file)
     if(!{body}) return message.channel.send('Eu buguei! Tente novamente.')
 
