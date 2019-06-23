@@ -4,7 +4,7 @@ const superagent = require("superagent");
 
 module.exports.run = (client, message, args) => {
 
-    let msg = await message.channel.send('Carregando...')
+    let msg = message.channel.send('Carregando...')
 
     let {body} = superagent
     .get(`https://apis.duncte123.me/meme`)
