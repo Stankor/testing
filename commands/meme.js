@@ -6,15 +6,15 @@ const superagent = require("superagent")
 module.exports.run = async (client, message, args) => {
     let msg = await message.channel.send("Generating...")
 
-    let {url} = await superagent
+    let {image} = await superagent
     .get(`https://api-to.get-a.life/meme`)
-    //console.log(body.file)
-    if(!{url}) return message.channel.send("I broke! Try again.")
+    console.log(image.file)
+    if(!{image}) return message.channel.send("I broke! Try again.")
 
         let mEmbed = new Discord.RichEmbed()
         .setColor(colours.cyan)
         .setAuthor(`TestBot MEMES!`, message.guild.iconURL)
-        .setImage(url)
+        .setImage(image)
         .setTimestamp()
         .setFooter(`TEST BOT`, client.user.displayAvatarURL)
 
