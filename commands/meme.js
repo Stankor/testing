@@ -10,3 +10,13 @@ module.exports.run = async (client, message, args) => {
     .get(`https://apis.duncte123.me/meme`)
     console.log(image.file)
 }
+
+
+module.exports.config = {
+   name: "meme",
+   noalias: "No Aliases",
+   description: "Sends a meme from a website!",
+   usage: "!meme",
+   accessableby: "Members",
+   aliases: []
+}
