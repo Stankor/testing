@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
 
         let mEmbed = new Discord.RichEmbed()
         .setColor(0xffffff)
-        .setAuthor("Um gatito bem fofito para você", message.guild.iconURL)
+        .setAuthor("Um gatito bem fofito para você.", message.guild.iconURL)
         .setImage(body.file)
         .setTimestamp()
         .setFooter("Sou um humano disfarçado", client.user.displayAvatarURL)
