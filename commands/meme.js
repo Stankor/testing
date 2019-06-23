@@ -24,11 +24,11 @@ module.exports.run = async (client, message, args) => {
 }
 
 
-//module.exports.config = {
-   // name: "meme",
-   // noalias: "No Aliases",
-    //description: "Sends a meme from a website!",
-   // usage: "!meme",
-   // accessableby: "Members",
-   // aliases: []
-//}
+module.exports.config = {
+   name: "meme",
+   noalias: "No Aliases",
+   description: "Sends a meme from a website!",
+   usage: "!meme",
+   accessableby: "Members",
+   aliases: []
+}
