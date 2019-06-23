@@ -6,9 +6,9 @@ const superagent = require("superagent")
 module.exports.run = async (client, message, args) => {
     let msg = await message.channel.send("Carregando...")
 
-    let {body} = await superagent
+    let {data} = await superagent
     .get(`https://dog.ceo/api/breeds/image/random`)
-    console.log({body}.data.url)
+    console.log(data.url)
 }
 
 
