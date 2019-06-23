@@ -9,18 +9,18 @@ module.exports.run = async (client, message, args) => {
     let {body} = await superagent
     .get(`http://aws.random.cat/meow`)
     console.log(body.file)
-    // if(!{image}) return message.channel.send("I broke! Try again.")
+    if(!{body}) return message.channel.send("I broke! Try again.")
 
-        //let mEmbed = new Discord.RichEmbed()
-        //.setColor(colours.cyan)
-        //.setAuthor(`TestBot MEMES!`, message.guild.iconURL)
-        //.setImage(image)
-        //.setTimestamp()
-       // .setFooter(`TEST BOT`, client.user.displayAvatarURL)
+        let mEmbed = new Discord.RichEmbed()
+        .setColor(colours.cyan)
+        .setAuthor(`TestBot MEMES!`, message.guild.iconURL)
+        .setImage(body.file)
+        .setTimestamp()
+        .setFooter(`TEST BOT`, client.user.displayAvatarURL)
 
-       // message.channel.send({embed: mEmbed})
+       message.channel.send({embed: mEmbed})
 
-      //  msg.delete();
+      msg.delete();
 }
 
 
