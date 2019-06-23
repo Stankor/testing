@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
     if(!{body}) return message.channel.send("I broke! Try again.")
 
         let mEmbed = new Discord.RichEmbed()
-        .setColor(colours.cyan)
+        .setColor(0xffffff)
         .setAuthor(`TestBot MEMES!`, message.guild.iconURL)
         .setImage(body.file)
         .setTimestamp()
