@@ -6,9 +6,9 @@ module.exports = client => {
     // bot.user.setActivity("Stankor Bot 2.0", {type: "STREAMING", url:"a"});
 
     let statuses = [
-        `${client.guilds.size} servers!`,
-        "!help",
-        `over ${client.users.size} users!`
+        `${client.guilds.size} servidores!`,
+        "Use: ;help",
+        `over ${client.users.size} usuários!`
     ]
 
     setInterval(function() {
