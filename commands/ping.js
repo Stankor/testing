@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
         let choices = ["Esse é realmente meu ping?", "Está tudo bem? Eu não consigo ver", "Eu espero que isso não seja ruim"]
         let response = choices[Math.floor(Math.random() * choices.length)]
 
-        m.edit(`:envelope_with_arrow: ${response}: :satellite: Latência do bot: \`${ping}\`, :satellite: Latência da API: \`${Math.round(bot.ping)}\``)
+        m.edit(`:envelope_with_arrow: ${response}: :satellite: Latência do bot: \`${ping}\`, :satellite: Latência da API: \`${Math.round(client.ping)}\``)
     })
 
 }
