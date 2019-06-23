@@ -3,7 +3,7 @@ const colours = require("./colours.json");
 
 const client = new Discord.Client({disableEveryone: true});
 
-require("./util/eventHandler")(bot)
+require("./util/eventHandler")(client)
 
 const fs = require("fs");
 client.commands = new Discord.Collection();
