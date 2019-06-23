@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => { //
     const imageSearch = new GoogleImages(process.env.CSE_ID, process.env.GOOGLE_KEY);
     imageSearch.search(args.join(" "), { safe: "high" }).then(images => {
       for (const [i, value] of images.entries()) {
-        embeds.push(new MessageEmbed().setFooter(`Page ${i + 1} of ${images.length}`).setImage(value.url));
+        embeds.push(new RichEmbed().setFooter(`Page ${i + 1} of ${images.length}`).setImage(value.url));
       }
       if (embeds.length != 0) {
         return new Embeds()
