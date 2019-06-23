@@ -11,7 +11,7 @@ exports.run = async (client, message, args) => { //
   } else {
     const embeds = [];
     const imageSearch = new GoogleImages(process.env.CSE_ID, process.env.GOOGLE_KEY);
-    imageSearch.search(args.join(" "), { safe: "high" }).then(images => {
+    imageSearch.search(args.join(" ")).then(images => {
       for (const [i, value] of images.entries()) {
         embeds.push(new RichEmbed().setFooter(`Page ${i + 1} of ${images.length}`).setImage(value.url));
       }
