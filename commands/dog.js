@@ -16,7 +16,7 @@ module.exports.run = async(client, message, args) => {
             .setAuthor('Cachorritos fofitos para você.', message.guild.iconURL)
             .setImage(body.message)
             .setTimestamp()
-            .setFooter('Sou um humano disfarçado', bot.user.avatarURL)
+            .setFooter('Sou um humano disfarçado', client.user.avatarURL)
         message.channel.send({embed: dEmbed})
 
         msg.delete();
