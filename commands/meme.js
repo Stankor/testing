@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
 
     let {body} = await superagent
     .get(`https://apis.duncte123.me/meme`)
-    console.log(body.sucess)
+    console.log(body.data.image)
 }
 
 
