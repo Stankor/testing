@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 const superagent = require("superagent");
 
-exports.run = async (client, message, args) => {
+module.exports.run = async (client, message, args) => {
 
     let msg = await message.channel.send('Carregando...')
 
