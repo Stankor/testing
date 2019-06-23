@@ -1,5 +1,5 @@
 // Comando de memes.
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 const superagent = require("superagent");
 
 module.exports.run = (client, message, args) => {
@@ -14,7 +14,7 @@ module.exports.run = (client, message, args) => {
         let mEmbed = new Discord.RichEmbed()
             .setColor(0xffffff)
             .setAuthor('Memes', message.guild.iconURL)
-            .setImage(body.image)
+            .setImage(body.url)
             .setTimestamp()
             .setFooter('Sou um humano disfarçado', bot.user.avatarURL)
         message.channel.send({embed: mEmbed})
