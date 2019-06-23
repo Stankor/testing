@@ -1,11 +1,9 @@
 // Comando de memes.
 const Discord = require("discord.js")
-const botconfig = require("../botconfig.json");
-const colours = require("../colours.json");
 const superagent = require("superagent")
 
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, message, args) => {
     let msg = await message.channel.send("Generating...")
 
     let {url} = await superagent
@@ -18,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
         .setAuthor(`TestBot MEMES!`, message.guild.iconURL)
         .setImage(url)
         .setTimestamp()
-        .setFooter(`TEST BOT`, bot.user.displayAvatarURL)
+        .setFooter(`TEST BOT`, client.user.displayAvatarURL)
 
         message.channel.send({embed: mEmbed})
 
