@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
         .setAuthor(Gatito, message.guild.iconURL)
         .setImage(body.file)
         .setTimestamp()
-        .setFooter(Sou um humano disfarçado, client.user.displayAvatarURL)
+        .setFooter("Sou um humano disfarçado", client.user.displayAvatarURL)
 
        message.channel.send({embed: mEmbed})
 
