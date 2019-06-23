@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
         let mEmbed = new Discord.RichEmbed()
             .setColor(0xffffff)
             .setAuthor('Memes', message.guild.iconURL)
-            .setImage(body.url)
+            .setImage(body.image)
             .setTimestamp()
             .setFooter('Sou um humano disfarçado', bot.user.avatarURL)
         message.channel.send({embed: mEmbed})
